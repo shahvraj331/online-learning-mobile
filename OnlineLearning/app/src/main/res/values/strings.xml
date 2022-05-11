@@ -1,6 +1,25 @@
 <resources>
-    <string name="app_name">OnlineLearning</string>
+    <string name="empty_string" />
+    <string name="google">Google</string>
+    <string name="apple">Apple</string>
+    <string name="email">Email</string>
     <string name="skip">Skip</string>
-    <string name="get_started">Get Started</string>
     <string name="progress">progress</string>
+    <string name="app_name">OnlineLearning</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="get_started">Get Started</string>
+    <string name="sign_in_title">Let’s Sign In</string>
+    <string name="sign_up_title">Let’s Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="dont_have_an_account_sign_up">Don’t have an account? Sign Up</string>
+    <string name="dont_have_an_account_sign_in">Don’t have an account? Sign In</string>
+    <string name="welcome_back">Welcome \nBack!</string>
+    <string name="create_account">Create \nAccount!</string>
+    <string name="or_continue_with">or continue with</string>
+    <string name="name_error">Enter proper name</string>
+    <string name="password_error">Enter proper password</string>
+    <string name="email_error">Enter proper email</string>
 </resources>

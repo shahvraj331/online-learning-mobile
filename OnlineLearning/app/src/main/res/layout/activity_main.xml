@@ -3,19 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".activity.MainActivity"
-    android:background="@drawable/ic_splashbackground">
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_118sdp"
-        android:src="@drawable/ic_krlearninglogo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="@dimen/_89sdp"
-        android:layout_marginEnd="@dimen/_89sdp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+    tools:context=".activity.MainActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
