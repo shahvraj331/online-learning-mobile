@@ -15,26 +15,26 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_55sdp">
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customToolbar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/baseScreen"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true">
+            android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTitle"
+                style="@style/regularTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
                 android:text="@string/otp_screen_title"
-                android:textColor="@color/darkBlueTextColor"
                 android:textSize="@dimen/_12ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -42,111 +42,70 @@
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etFirstNumber"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
+                style="@style/otpEditText"
                 android:layout_marginTop="@dimen/_75sdp"
-                android:background="@drawable/default_round_edittext"
-                android:focusable="true"
-                android:gravity="center"
                 android:imeOptions="actionNext"
-                android:inputType="phone"
-                android:maxLength="1"
                 app:layout_constraintEnd_toStartOf="@id/etSecondNumber"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvTitle"
                 app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etSecondNumber"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
+                style="@style/otpEditText"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:background="@drawable/default_round_edittext"
-                android:focusable="true"
-                android:gravity="center"
                 android:imeOptions="actionNext"
-                android:inputType="phone"
-                android:maxLength="1"
                 app:layout_constraintEnd_toStartOf="@id/etThirdNumber"
                 app:layout_constraintStart_toEndOf="@+id/etFirstNumber"
                 app:layout_constraintTop_toTopOf="@id/etFirstNumber" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etThirdNumber"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
+                style="@style/otpEditText"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:background="@drawable/default_round_edittext"
-                android:focusable="true"
-                android:gravity="center"
                 android:imeOptions="actionNext"
-                android:inputType="phone"
-                android:maxLength="1"
                 app:layout_constraintEnd_toStartOf="@id/etFourthNumber"
                 app:layout_constraintStart_toEndOf="@id/etSecondNumber"
                 app:layout_constraintTop_toTopOf="@id/etFirstNumber" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etFourthNumber"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
+                style="@style/otpEditText"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:background="@drawable/default_round_edittext"
-                android:focusable="true"
-                android:gravity="center"
                 android:imeOptions="actionNext"
-                android:inputType="phone"
-                android:maxLength="1"
                 app:layout_constraintEnd_toStartOf="@id/etFifthNumber"
                 app:layout_constraintStart_toEndOf="@id/etThirdNumber"
                 app:layout_constraintTop_toTopOf="@id/etFirstNumber" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etFifthNumber"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
+                style="@style/otpEditText"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:background="@drawable/default_round_edittext"
-                android:focusable="true"
-                android:gravity="center"
                 android:imeOptions="actionDone"
-                android:inputType="phone"
-                android:maxLength="1"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvTitle"
                 app:layout_constraintStart_toEndOf="@id/etFourthNumber"
                 app:layout_constraintTop_toTopOf="@id/etFirstNumber" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvResendCode"
+                style="@style/regularTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="@string/resend_code"
-                android:textColor="@color/darkBlueTextColor"
+                android:text="@string/didnt_receive_a_code"
                 android:textSize="@dimen/_11ssp"
                 app:layout_constraintEnd_toEndOf="@id/etFifthNumber"
                 app:layout_constraintTop_toBottomOf="@id/etFifthNumber" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnConfirm"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/defaultButton"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_72sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_20sdp"
-                android:background="@drawable/default_round_button"
-                android:fontFamily="@font/poppins_regular"
                 android:text="@string/confirm"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_12ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="@id/tvTitle"
                 app:layout_constraintTop_toBottomOf="@+id/tvResendCode" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
