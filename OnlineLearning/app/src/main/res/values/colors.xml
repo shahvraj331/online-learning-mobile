@@ -12,4 +12,5 @@
     <color name="light_gray">#979797</color>
     <color name="grayButtonBackground">#F6F6F6</color>
     <color name="darkBlueTextColor">#202244</color>
+    <color name="appBaseColorDark">#238A5F</color>
 </resources>

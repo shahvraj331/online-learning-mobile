@@ -4,6 +4,7 @@ object Constants {
     const val ZERO = 0.0
     const val ONE = 1
     const val SEVEN = 7
+    const val ELEVEN = 11
     const val MINUS_ONE = -1
     const val HUNDRED = 100
     const val ONE_THOUSAND = 1000
