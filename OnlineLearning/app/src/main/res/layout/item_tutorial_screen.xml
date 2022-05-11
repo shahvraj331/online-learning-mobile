@@ -16,27 +16,25 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvHeader"
+        style="@style/mediumTextView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:gravity="center"
         android:paddingStart="@dimen/_10sdp"
         android:paddingEnd="@dimen/_10sdp"
-        android:textColor="@color/black"
         android:textSize="@dimen/_18ssp"
-        app:fontFamily="@font/poppins_medium"
         app:layout_constraintBottom_toTopOf="@+id/tvDescription" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvDescription"
+        style="@style/regularTextViewLightGray"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="center"
         android:paddingStart="@dimen/_10sdp"
         android:paddingEnd="@dimen/_10sdp"
-        android:textColor="@color/light_gray"
         android:textSize="@dimen/_12ssp"
-        app:fontFamily="@font/poppins_regular"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

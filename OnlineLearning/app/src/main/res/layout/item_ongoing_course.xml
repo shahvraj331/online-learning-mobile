@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_200sdp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_20sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCurrentItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgGoogle"
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_google"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCourseTitle"
+            style="@style/regularTextViewWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:text="@string/ongoing_course_title"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgGoogle"
+            app:layout_constraintTop_toTopOf="@id/imgGoogle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:src="@drawable/ic_seekbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgGoogle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCompletedLessons"
+            style="@style/regularTextViewWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:alpha="0.7"
+            android:text="@string/completed_lessons"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgProgress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotalLessons"
+            style="@style/regularTextViewWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:alpha="0.7"
+            android:text="@string/total_lessons"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgProgress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumberOfShits"
+            style="@style/regularTextViewWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginBottom="@dimen/_9sdp"
+            android:text="@string/number_of_shits"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCompletedLessons" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumberOfVideos"
+            style="@style/regularTextViewWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/number_of_videos"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintEnd_toStartOf="@id/tvNumberOfShits"
+            app:layout_constraintTop_toBottomOf="@id/tvCompletedLessons"
+            app:layout_constraintTop_toTopOf="@id/tvNumberOfShits" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumberOfQuiz"
+            style="@style/regularTextViewWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/number_of_quiz"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintStart_toEndOf="@id/tvNumberOfShits"
+            app:layout_constraintTop_toBottomOf="@id/tvCompletedLessons"
+            app:layout_constraintTop_toTopOf="@id/tvNumberOfShits" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

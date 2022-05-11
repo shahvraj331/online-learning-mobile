@@ -5,14 +5,14 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinelearning.common.Constants
-import com.example.onlinelearning.databinding.ProfileItemArrowBinding
-import com.example.onlinelearning.databinding.ProfileItemSwitchBinding
+import com.example.onlinelearning.databinding.ItemProfileArrowBinding
+import com.example.onlinelearning.databinding.ItemProfileSwitchBinding
 import com.example.onlinelearning.model.ProfileData
 
 class ProfileAdapter(private val profileData: ArrayList<ProfileData>):
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    inner class SwitchViewHolder(val binding: ProfileItemSwitchBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class SwitchViewHolder(val binding: ItemProfileSwitchBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindViewHolder(position: Int) {
             binding.imgProfileItem.setImageResource(profileData[position].image)
             binding.tvItem.text = profileData[position].title
@@ -23,7 +23,7 @@ class ProfileAdapter(private val profileData: ArrayList<ProfileData>):
         }
     }
 
-    inner class ArrowViewHolder(val binding: ProfileItemArrowBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ArrowViewHolder(val binding: ItemProfileArrowBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindViewHolder(position: Int) {
             binding.imgProfileItem.setImageResource(profileData[position].image)
             binding.tvItem.text = profileData[position].title
@@ -32,10 +32,10 @@ class ProfileAdapter(private val profileData: ArrayList<ProfileData>):
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return if (viewType == Constants.ZERO.toInt()) {
-            val binding = ProfileItemSwitchBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            val binding = ItemProfileSwitchBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             SwitchViewHolder(binding)
         } else {
-            val binding = ProfileItemArrowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            val binding = ItemProfileArrowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             ArrowViewHolder(binding)
         }
     }
