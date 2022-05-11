@@ -40,7 +40,6 @@
     <string name="search_query_hint">Search anything</string>
     <string name="ongoing_course">Ongoing Course</string>
     <string name="view_all">View All</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ongoing_course_title">Foundations of Google UX UI Design</string>
     <string name="number_of_shits">30 Shit</string>
@@ -54,4 +53,10 @@
     <string name="ux_ui_design">UX UI Design</string>
     <string name="number_of_lesson">64 Lesson</string>
     <string name="number_of_enrolls">100+ Enrolled</string>
+    <string name="profile">Profile</string>
+    <string name="txt_kawsar_ahmed">Kawsar Ahmed</string>
+    <string name="txt_user_email">kawsarui.ux@gmail.com</string>
+    <string name="txt_courses">15 Courses</string>
+    <string name="txt_hours">23 Hours</string>
+    <string name="txt_reviews">4.9 Reviews</string>
 </resources>
