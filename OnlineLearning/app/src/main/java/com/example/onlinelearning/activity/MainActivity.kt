@@ -12,12 +12,8 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        lifecycleScope.launch {
-            delay(Constants.THREE_THOUSAND.toLong())
-            startActivity(Intent(this@MainActivity, TutorialActivity::class.java))
-            finish()
-        }
+        startActivity(Intent(this@MainActivity, TutorialActivity::class.java))
+        finish()
     }
 }
