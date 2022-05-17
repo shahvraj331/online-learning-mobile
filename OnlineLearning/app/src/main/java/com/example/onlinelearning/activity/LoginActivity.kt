@@ -38,6 +38,10 @@ class LoginActivity : AppCompatActivity() {
                 etPassword.updateTransformationMethod(it)
             }
 
+            btnForgotPassword.setOnClickListener {
+                startActivity(Intent(this@LoginActivity, ForgotPasswordActivity::class.java))
+            }
+
             val signUpText = tvSignUp.text.toString()
             val spanColor = ContextCompat.getColor(this@LoginActivity, R.color.appBaseColor)
             val customSpannable = getSpannable(signUpText, signUpText.length - Constants.SEVEN, signUpText.length, spanColor) {

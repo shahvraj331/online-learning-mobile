@@ -10,17 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineLearning">
         <activity
+            android:name=".activity.ResetPasswordActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NooActionBar" />
+        <activity
+            android:name=".activity.ForgotPasswordActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NooActionBar" />
+        <activity
+            android:name=".activity.VerificationActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NooActionBar" />
+        <activity
             android:name=".activity.SignUpActivity"
             android:exported="false"
-            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+            android:theme="@style/AppTheme.NooActionBar" />
         <activity
             android:name=".activity.LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+            android:theme="@style/AppTheme.NooActionBar" />
         <activity
             android:name=".activity.AuthenticationActivity"
             android:exported="false"
-            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+            android:theme="@style/AppTheme.NooActionBar" />
         <activity
             android:name=".activity.TutorialActivity"
             android:exported="false"
