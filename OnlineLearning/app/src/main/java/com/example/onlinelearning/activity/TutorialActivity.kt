@@ -1,6 +1,7 @@
 package com.example.onlinelearning.activity
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -9,6 +10,7 @@ import com.example.onlinelearning.R
 import com.example.onlinelearning.adapter.TutorialAdapter
 import com.example.onlinelearning.model.TutorialData
 import com.example.onlinelearning.common.Constants
+import com.example.onlinelearning.common.SharedPreference
 import com.example.onlinelearning.databinding.ActivityTutorialBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -21,12 +23,14 @@ class TutorialActivity : AppCompatActivity() {
     private lateinit var tutorialData: ArrayList<TutorialData>
     private var currentPosition = Constants.ZERO.toInt()
     private var currentProgress = Constants.ZERO
+    private lateinit var tutorialSharedPreferences: SharedPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTutorialBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        tutorialSharedPreferences = SharedPreference(getSharedPreferences(Constants.SHARED_PREFERENCE_KEY, MODE_PRIVATE))
         initializeTutorialData()
         val adapter = TutorialAdapter(tutorialData)
 
@@ -42,11 +46,13 @@ class TutorialActivity : AppCompatActivity() {
                     btnSkip.text = if (currentPosition == tutorialData.count() - Constants.ONE) getString(
                         R.string.get_started
                     ) else getString(R.string.skip)
+                } else {
+                    startAuthenticationActivity()
                 }
             }
 
             btnSkip.setOnClickListener {
-                setAnimatedProgress(Constants.HUNDRED)
+                startAuthenticationActivity()
             }
 
             viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
@@ -79,12 +85,13 @@ class TutorialActivity : AppCompatActivity() {
             ObjectAnimator.ofInt(binding.progressBar, getString(R.string.progress), binding.progressBar.progress, progress).setDuration(
                 Constants.ONE_THOUSAND.toLong()).start()
             delay(Constants.ONE_THOUSAND.toLong())
-            if (progress >= Constants.HUNDRED) startLoginActivity()
         }
     }
 
-    private fun startLoginActivity() {
-        //TODO: Start login activity
+    private fun startAuthenticationActivity() {
+        tutorialSharedPreferences.setTutorialCompleted()
+        startActivity(Intent(this@TutorialActivity, AuthenticationActivity::class.java))
+        finish()
     }
 
     private fun initializeTutorialData() {

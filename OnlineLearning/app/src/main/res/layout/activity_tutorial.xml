@@ -12,7 +12,7 @@
         android:layout_height="@dimen/_35sdp"
         android:layout_marginStart="@dimen/_19sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:background="@color/backButtonBackground"
+        android:background="@color/grayButtonBackground"
         android:scaleType="center"
         android:src="@drawable/ic_arrow_backward"
         app:layout_constraintStart_toStartOf="parent"

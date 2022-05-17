@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="appBaseColor">#30C084</color>
     <color name="progressTrackColor">#F5F5F5</color>
-    <color name="backButtonBackground">#F6F6F6</color>
     <color name="light_gray">#979797</color>
+    <color name="grayButtonBackground">#F6F6F6</color>
+    <color name="darkBlueTextColor">#202244</color>
 </resources>
