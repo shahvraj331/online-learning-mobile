@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineLearning">
         <activity
+            android:name=".activity.HomeActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NooActionBar" />
+        <activity
             android:name=".activity.ResetPasswordActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NooActionBar" />

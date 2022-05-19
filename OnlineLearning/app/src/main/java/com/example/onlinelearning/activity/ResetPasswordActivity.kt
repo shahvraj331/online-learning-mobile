@@ -34,7 +34,7 @@ class ResetPasswordActivity : AppCompatActivity() {
             }
 
             imgConfirmPasswordToggle.setOnClickListener {
-                etPassword.updateTransformationMethod(it)
+                etConfirmPassword.updateTransformationMethod(it)
             }
 
             btnConfirm.setOnClickListener {

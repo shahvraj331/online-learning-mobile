@@ -34,4 +34,24 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="reset_password_success">Reset Password Success</string>
     <string name="reset_password_title">Reset Password</string>
+    <string name="home">Home</string>
+    <string name="user_greet">Hey, Kawsar</string>
+    <string name="lets_start_learning">Let’s Start Learning!</string>
+    <string name="search_query_hint">Search anything</string>
+    <string name="ongoing_course">Ongoing Course</string>
+    <string name="view_all">View All</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ongoing_course_title">Foundations of Google UX UI Design</string>
+    <string name="number_of_shits">30 Shit</string>
+    <string name="total_lessons">64 Lesson</string>
+    <string name="completed_lessons">43 Lesson</string>
+    <string name="number_of_videos">64 Videos</string>
+    <string name="number_of_quiz">80 Quiz</string>
+    <string name="choice_your_courses">Choice your courses</string>
+    <string name="all">All</string>
+    <string name="popular">Popular</string>
+    <string name="ux_ui_design">UX UI Design</string>
+    <string name="number_of_lesson">64 Lesson</string>
+    <string name="number_of_enrolls">100+ Enrolled</string>
 </resources>
