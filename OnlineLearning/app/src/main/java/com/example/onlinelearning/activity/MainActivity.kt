@@ -1,12 +1,11 @@
 package com.example.onlinelearning.activity
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.onlinelearning.base_class.BaseActivity
 import com.example.onlinelearning.common.Constants
 import com.example.onlinelearning.common.SharedPreference
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private lateinit var tutorialSharedPreferences: SharedPreference
 
@@ -14,12 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         tutorialSharedPreferences = SharedPreference(getSharedPreferences(Constants.SHARED_PREFERENCE_KEY, MODE_PRIVATE))
-        startActivity(
-            Intent(
-                this@MainActivity,
-                if (tutorialSharedPreferences.isTutorialCompleted()) AuthenticationActivity::class.java else TutorialActivity::class.java
-            )
-        )
+        startNewActivity(if (tutorialSharedPreferences.isTutorialCompleted()) AuthenticationActivity() else TutorialActivity())
         finish()
     }
 }

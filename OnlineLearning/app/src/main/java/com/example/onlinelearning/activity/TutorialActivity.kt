@@ -8,10 +8,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.example.onlinelearning.R
 import com.example.onlinelearning.adapter.TutorialAdapter
-import com.example.onlinelearning.model.TutorialData
 import com.example.onlinelearning.common.Constants
 import com.example.onlinelearning.common.SharedPreference
 import com.example.onlinelearning.databinding.ActivityTutorialBinding
+import com.example.onlinelearning.model.TutorialData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -21,8 +21,8 @@ class TutorialActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTutorialBinding
     private lateinit var tutorialData: ArrayList<TutorialData>
-    private var currentPosition = Constants.ZERO.toInt()
-    private var currentProgress = Constants.ZERO
+    private var currentPosition = Constants.ZERO
+    private var currentProgress = Constants.INITIAL_PROGRESS
     private lateinit var tutorialSharedPreferences: SharedPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,8 +83,8 @@ class TutorialActivity : AppCompatActivity() {
     private fun setAnimatedProgress(progress: Int) {
         lifecycleScope.launch(Dispatchers.Main) {
             ObjectAnimator.ofInt(binding.progressBar, getString(R.string.progress), binding.progressBar.progress, progress).setDuration(
-                Constants.ONE_THOUSAND.toLong()).start()
-            delay(Constants.ONE_THOUSAND.toLong())
+                Constants.ONE_THOUSAND).start()
+            delay(Constants.ONE_THOUSAND)
         }
     }
 

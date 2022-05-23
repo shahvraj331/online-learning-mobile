@@ -57,13 +57,13 @@
                 android:id="@+id/etEmail"
                 style="@style/baseEditText"
                 android:layout_width="0dp"
-                android:layout_marginTop="@dimen/_37sdp"
+                android:layout_marginTop="@dimen/_16sdp"
                 android:hint="@string/email"
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"
                 app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
-                app:layout_constraintTop_toBottomOf="@id/tvWelcomeBack" />
+                app:layout_constraintTop_toBottomOf="@id/etName" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etPassword"
@@ -75,7 +75,7 @@
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"
                 app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
-                app:layout_constraintTop_toBottomOf="@id/etName" />
+                app:layout_constraintTop_toBottomOf="@id/etEmail" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imgPasswordToggle"
@@ -86,6 +86,17 @@
                 app:layout_constraintBottom_toBottomOf="@id/etPassword"
                 app:layout_constraintEnd_toEndOf="@id/etPassword"
                 app:layout_constraintTop_toTopOf="@id/etPassword" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/defaultProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSignUp"
