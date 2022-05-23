@@ -34,4 +34,9 @@
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">@color/appBaseColor</item>
     </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
 </resources>

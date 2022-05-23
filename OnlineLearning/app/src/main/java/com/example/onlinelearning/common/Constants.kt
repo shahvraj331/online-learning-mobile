@@ -5,6 +5,8 @@ object Constants {
     const val ONE = 1
     const val SEVEN = 7
     const val ELEVEN = 11
+    const val FOUR = 4
+    const val SIX = 6
     const val MINUS_ONE = -1
     const val HUNDRED = 100
     const val ONE_THOUSAND = 1000

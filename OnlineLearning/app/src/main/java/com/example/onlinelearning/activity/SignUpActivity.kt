@@ -53,7 +53,8 @@ class SignUpActivity : AppCompatActivity() {
                 val email = etEmail.text.toString().trim()
                 val password = etPassword.text.toString().trim()
                 if (isValidCredentials(name, email, password)) {
-                    //TODO: Start home screen
+                    startActivity(Intent(this@SignUpActivity, HomeActivity::class.java))
+                    finish()
                 }
             }
         }

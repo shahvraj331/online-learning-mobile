@@ -55,7 +55,8 @@ class LoginActivity : AppCompatActivity() {
                 val name = etName.text.toString().trim()
                 val password = etPassword.text.toString().trim()
                 if (isValidCredentials(name, password)) {
-                    //TODO: Start home screen
+                    startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+                    finish()
                 }
             }
         }

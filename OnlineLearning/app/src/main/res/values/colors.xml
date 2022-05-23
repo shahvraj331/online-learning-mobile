@@ -13,4 +13,6 @@
     <color name="grayButtonBackground">#F6F6F6</color>
     <color name="darkBlueTextColor">#202244</color>
     <color name="appBaseColorDark">#238A5F</color>
+    <color name="bottom_nav_item_selected_color">#665BE6</color>
+    <color name="bottom_nav_item_unselected_color">#E0E0E0</color>
 </resources>
