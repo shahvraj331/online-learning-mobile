@@ -8,10 +8,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.example.onlinelearning.R
 import com.example.onlinelearning.adapter.TutorialAdapter
-import com.example.onlinelearning.model.TutorialData
 import com.example.onlinelearning.common.Constants
 import com.example.onlinelearning.common.SharedPreference
 import com.example.onlinelearning.databinding.ActivityTutorialBinding
+import com.example.onlinelearning.model.TutorialData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

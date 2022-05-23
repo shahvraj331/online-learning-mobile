@@ -19,11 +19,12 @@
     <string name="welcome_back">Welcome \nBack!</string>
     <string name="create_account">Create \nAccount!</string>
     <string name="or_continue_with">or continue with</string>
+    <string name="all_fields_required">All fields required</string>
     <string name="name_error">Enter proper name</string>
     <string name="password_error">Enter proper password</string>
     <string name="email_error">Enter proper email</string>
     <string name="otp_screen_title">Enter the code we sent your registered mail</string>
-    <string name="resend_code">Didn\'t receive a code? Resend Code</string>
+    <string name="didnt_receive_a_code">Didn\'t receive a code? Resend Code</string>
     <string name="confirm">Confirm</string>
     <string name="verification_title">Verification Code</string>
     <string name="forgot_password_title_text">We need your registration email to send you password reset code!</string>
@@ -40,7 +41,6 @@
     <string name="search_query_hint">Search anything</string>
     <string name="ongoing_course">Ongoing Course</string>
     <string name="view_all">View All</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ongoing_course_title">Foundations of Google UX UI Design</string>
     <string name="number_of_shits">30 Shit</string>
@@ -54,4 +54,12 @@
     <string name="ux_ui_design">UX UI Design</string>
     <string name="number_of_lesson">64 Lesson</string>
     <string name="number_of_enrolls">100+ Enrolled</string>
+    <string name="profile">Profile</string>
+    <string name="txt_kawsar_ahmed">Kawsar Ahmed</string>
+    <string name="txt_user_email">kawsarui.ux@gmail.com</string>
+    <string name="txt_courses">15 Courses</string>
+    <string name="txt_hours">23 Hours</string>
+    <string name="txt_reviews">4.9 Reviews</string>
+    <string name="login_failure">Login unsuccessful</string>
+    <string name="signup_failure">SignUp unsuccessful</string>
 </resources>

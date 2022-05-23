@@ -3,9 +3,9 @@ package com.example.onlinelearning.common
 object Constants {
     const val ZERO = 0.0
     const val ONE = 1
+    const val FOUR = 4
     const val SEVEN = 7
     const val ELEVEN = 11
-    const val FOUR = 4
     const val SIX = 6
     const val MINUS_ONE = -1
     const val HUNDRED = 100

@@ -1,14 +1,13 @@
 package com.example.onlinelearning.common
 
-import android.app.Activity
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.TextPaint
 import android.text.method.PasswordTransformationMethod
 import android.text.style.ClickableSpan
+import android.util.Patterns
 import android.view.View
-import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 
 fun getSpannable(text: String, startIndex: Int, endIndex: Int, color: Int, spanClickCallback: () -> Unit): Spannable {
@@ -28,17 +27,24 @@ fun getSpannable(text: String, startIndex: Int, endIndex: Int, color: Int, spanC
     return spannable
 }
 
-fun Activity.hideKeyboard() {
-    currentFocus?.let {
-        val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(it.windowToken, Constants.ZERO.toInt())
-    }
-}
-
 fun EditText.updateTransformationMethod(image: View) {
     this.transformationMethod = if (image.isSelected) PasswordTransformationMethod() else null
     image.isSelected = !image.isSelected
     this.text?.let { text ->
         this.setSelection(text.length)
     }
+}
+
+fun EditText.trimmedText() = this.text.toString().trim()
+
+fun verifyNonEmpty(vararg input: EditText): Boolean {
+    for (editText in input) {
+        if (editText.trimmedText().isEmpty()) return false
+    }
+    return true
+}
+
+fun EditText.verifyEmailAddress(): Boolean {
+    val text = this.trimmedText()
+    return text.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(text).matches()
 }
