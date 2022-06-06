@@ -19,11 +19,12 @@
     <string name="welcome_back">Welcome \nBack!</string>
     <string name="create_account">Create \nAccount!</string>
     <string name="or_continue_with">or continue with</string>
+    <string name="all_fields_required">All fields required</string>
     <string name="name_error">Enter proper name</string>
     <string name="password_error">Enter proper password</string>
     <string name="email_error">Enter proper email</string>
     <string name="otp_screen_title">Enter the code we sent your registered mail</string>
-    <string name="resend_code">Didn\'t receive a code? Resend Code</string>
+    <string name="didnt_receive_a_code">Didn\'t receive a code? Resend Code</string>
     <string name="confirm">Confirm</string>
     <string name="verification_title">Verification Code</string>
     <string name="forgot_password_title_text">We need your registration email to send you password reset code!</string>

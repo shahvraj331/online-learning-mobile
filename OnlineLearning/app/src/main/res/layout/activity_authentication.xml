@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="@dimen/_50sdp"
-        android:src="@drawable/ic_autheticate_image"
+        android:src="@drawable/ic_authenticate_image"
         app:layout_constraintBottom_toTopOf="@id/btnSignIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,38 +30,24 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSignIn"
-        style="?android:attr/borderlessButtonStyle"
+        style="@style/defaultButton"
         android:layout_width="0dp"
-        android:layout_height="@dimen/_40sdp"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_20sdp"
-        android:background="@drawable/default_round_button"
-        android:fontFamily="@font/poppins_regular"
         android:text="@string/sign_in"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_12ssp"
         app:layout_constraintBottom_toTopOf="@id/btnSignUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSignUp"
-        style="?android:attr/borderlessButtonStyle"
+        style="@style/grayButton"
         android:layout_width="0dp"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_40sdp"
-        android:background="@drawable/gray_round_button"
-        android:fontFamily="@font/poppins_regular"
         android:text="@string/sign_up"
-        android:textAllCaps="false"
-        android:textColor="@color/darkBlueTextColor"
-        android:textSize="@dimen/_12ssp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/btnSignIn"
+        app:layout_constraintStart_toStartOf="@id/btnSignIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

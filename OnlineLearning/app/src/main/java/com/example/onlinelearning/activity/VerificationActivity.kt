@@ -1,15 +1,11 @@
 package com.example.onlinelearning.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.onlinelearning.R
-import com.example.onlinelearning.common.Constants
-import com.example.onlinelearning.common.OTPTextWatcher
-import com.example.onlinelearning.common.getSpannable
-import com.example.onlinelearning.common.hideKeyboard
+import com.example.onlinelearning.common.*
 import com.example.onlinelearning.databinding.ActivityVerificationBinding
 
 class VerificationActivity : AppCompatActivity() {
@@ -47,7 +43,7 @@ class VerificationActivity : AppCompatActivity() {
 
             btnConfirm.setOnClickListener {
                 if (validateOTP()) {
-                    startActivity(Intent(this@VerificationActivity, ResetPasswordActivity::class.java))
+                    startNewActivity(ResetPasswordActivity())
                     finish()
                 }
             }
@@ -57,11 +53,7 @@ class VerificationActivity : AppCompatActivity() {
     private fun validateOTP(): Boolean {
         with(binding) {
             return when {
-                etFirstNumber.text.toString().isEmpty() -> false
-                etSecondNumber.text.toString().isEmpty() -> false
-                etThirdNumber.text.toString().isEmpty() -> false
-                etFourthNumber.text.toString().isEmpty() -> false
-                etFifthNumber.text.toString().isEmpty() -> false
+                !verifyNonEmpty(etFirstNumber, etSecondNumber, etThirdNumber, etFourthNumber, etFifthNumber) -> false
                 else -> true
             }
         }
@@ -71,53 +63,11 @@ class VerificationActivity : AppCompatActivity() {
         with(binding) {
             return OTPTextWatcher { textFlag ->
                 when (currentEditText) {
-                    etFirstNumber -> {
-                        when (textFlag) {
-                            1 -> {
-                                etSecondNumber.requestFocus()
-                            }
-                        }
-                    }
-                    etSecondNumber -> {
-                        when (textFlag) {
-                            0 -> {
-                                etFirstNumber.requestFocus()
-                            }
-                            1 -> {
-                                etThirdNumber.requestFocus()
-                            }
-                        }
-                    }
-                    etThirdNumber -> {
-                        when (textFlag) {
-                            0 -> {
-                                etSecondNumber.requestFocus()
-                            }
-                            1 -> {
-                                etFourthNumber.requestFocus()
-                            }
-                        }
-                    }
-                    etFourthNumber -> {
-                        when (textFlag) {
-                            0 -> {
-                                etThirdNumber.requestFocus()
-                            }
-                            1 -> {
-                                etFifthNumber.requestFocus()
-                            }
-                        }
-                    }
-                    etFifthNumber -> {
-                        when (textFlag) {
-                            0 -> {
-                                etFourthNumber.requestFocus()
-                            }
-                            1 -> {
-                                hideKeyboard()
-                            }
-                        }
-                    }
+                    etFirstNumber -> if (textFlag) etSecondNumber.requestFocus()
+                    etSecondNumber -> if (textFlag) etThirdNumber.requestFocus() else etFirstNumber.requestFocus()
+                    etThirdNumber -> if (textFlag) etFourthNumber.requestFocus() else etSecondNumber.requestFocus()
+                    etFourthNumber -> if (textFlag) etFifthNumber.requestFocus() else etThirdNumber.requestFocus()
+                    etFifthNumber -> if (textFlag) hideKeyboard() else etFourthNumber.requestFocus()
                 }
             }
         }

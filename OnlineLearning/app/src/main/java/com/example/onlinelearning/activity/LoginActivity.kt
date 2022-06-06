@@ -1,16 +1,18 @@
 package com.example.onlinelearning.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.onlinelearning.R
 import com.example.onlinelearning.common.Constants
 import com.example.onlinelearning.common.getSpannable
 import com.example.onlinelearning.common.hideKeyboard
+import com.example.onlinelearning.common.startNewActivity
+import com.example.onlinelearning.common.toastMessage
+import com.example.onlinelearning.common.trimmedText
 import com.example.onlinelearning.common.updateTransformationMethod
+import com.example.onlinelearning.common.verifyNonEmpty
 import com.example.onlinelearning.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -39,36 +41,37 @@ class LoginActivity : AppCompatActivity() {
             }
 
             btnForgotPassword.setOnClickListener {
-                startActivity(Intent(this@LoginActivity, ForgotPasswordActivity::class.java))
+                startNewActivity(ForgotPasswordActivity())
             }
 
             val signUpText = tvSignUp.text.toString()
             val spanColor = ContextCompat.getColor(this@LoginActivity, R.color.appBaseColor)
             val customSpannable = getSpannable(signUpText, signUpText.length - Constants.SEVEN, signUpText.length, spanColor) {
-                startActivity(Intent(this@LoginActivity, SignUpActivity::class.java))
+                startNewActivity(SignUpActivity())
                 finish()
             }
             tvSignUp.text = customSpannable
             tvSignUp.movementMethod = LinkMovementMethod.getInstance()
 
             btnSignIn.setOnClickListener {
-                val name = etName.text.toString().trim()
-                val password = etPassword.text.toString().trim()
-                if (isValidCredentials(name, password)) {
-                    startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
-                    finish()
+                if (isValidCredentials()) {
+                    //TODO: Start home screen
                 }
             }
         }
     }
 
-    private fun isValidCredentials(name: String, password: String): Boolean {
-        return if (name.isEmpty()) {
-            Toast.makeText(this@LoginActivity, getString(R.string.name_error), Toast.LENGTH_SHORT).show()
-            false
-        } else if (password.isEmpty() || password.length < 4) {
-            Toast.makeText(this@LoginActivity, getString(R.string.password_error), Toast.LENGTH_SHORT).show()
-            false
-        } else true
+    private fun isValidCredentials(): Boolean {
+        return when {
+            !verifyNonEmpty(binding.etName, binding.etPassword) -> {
+                toastMessage(getString(R.string.all_fields_required))
+                false
+            }
+            binding.etPassword.trimmedText().length < Constants.FOUR -> {
+                toastMessage(getString(R.string.password_error))
+                false
+            }
+            else -> true
+        }
     }
 }

@@ -29,13 +29,12 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/toolbarTitle"
+                style="@style/mediumTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/sign_in_title"
-                android:textColor="#202244"
-                android:textSize="@dimen/_14ssp"
-                app:fontFamily="@font/poppins_medium" />
+                android:textSize="@dimen/_14ssp" />
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>

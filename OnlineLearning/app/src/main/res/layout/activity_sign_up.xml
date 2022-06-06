@@ -25,204 +25,149 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/baseScreen"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true">
+            android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvWelcomeBack"
-                android:layout_width="wrap_content"
+                style="@style/mediumTextView"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_30sdp"
-                android:fontFamily="@font/poppins_medium"
+                android:layout_marginEnd="@dimen/_20sdp"
                 android:text="@string/create_account"
-                android:textColor="@color/darkBlueTextColor"
                 android:textSize="@dimen/_20ssp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etName"
+                style="@style/baseEditText"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_37sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:background="@drawable/default_round_edittext"
-                android:fontFamily="@font/poppins_regular"
                 android:hint="@string/name"
                 android:imeOptions="actionNext"
                 android:inputType="text"
-                android:paddingStart="@dimen/_10sdp"
-                android:paddingEnd="@dimen/_10sdp"
-                android:textColor="@color/darkBlueTextColor"
-                android:textSize="@dimen/_12ssp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"
+                app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
                 app:layout_constraintTop_toBottomOf="@id/tvWelcomeBack" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etEmail"
+                style="@style/baseEditText"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:background="@drawable/default_round_edittext"
-                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="@dimen/_37sdp"
                 android:hint="@string/email"
                 android:imeOptions="actionNext"
-                android:inputType="textEmailAddress"
-                android:paddingStart="@dimen/_10sdp"
-                android:paddingEnd="@dimen/_10sdp"
-                android:textColor="@color/darkBlueTextColor"
-                android:textSize="@dimen/_12ssp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"
+                app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
+                app:layout_constraintTop_toBottomOf="@id/tvWelcomeBack" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPassword"
+                style="@style/baseEditText"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"
+                app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
                 app:layout_constraintTop_toBottomOf="@id/etName" />
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/llPassword"
-                android:layout_width="0dp"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPasswordToggle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/etEmail">
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40sdp"
-                    android:background="@drawable/default_round_edittext"
-                    android:fontFamily="@font/poppins_regular"
-                    android:hint="@string/password"
-                    android:imeOptions="actionDone"
-                    android:inputType="textPassword"
-                    android:paddingStart="@dimen/_10sdp"
-                    android:paddingEnd="@dimen/_10sdp"
-                    android:textColor="@color/darkBlueTextColor"
-                    android:textSize="@dimen/_12ssp" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/imgPasswordToggle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="-35dp"
-                    android:background="@drawable/ic_hide_password" />
-            </androidx.appcompat.widget.LinearLayoutCompat>
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@drawable/ic_hide_password"
+                app:layout_constraintBottom_toBottomOf="@id/etPassword"
+                app:layout_constraintEnd_toEndOf="@id/etPassword"
+                app:layout_constraintTop_toTopOf="@id/etPassword" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSignUp"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/defaultButton"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_26sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
-                android:background="@drawable/default_round_button"
-                android:fontFamily="@font/poppins_regular"
                 android:text="@string/sign_up"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_12ssp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/llPassword" />
+                app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"
+                app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
+                app:layout_constraintTop_toBottomOf="@id/etPassword" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvSignUp"
+                android:id="@+id/tvSignIn"
+                style="@style/regularTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
                 android:text="@string/dont_have_an_account_sign_in"
-                android:textColor="@color/darkBlueTextColor"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintTop_toBottomOf="@id/btnSignUp" />
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_1sdp"
-                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@color/darkBlueTextColor"
                 app:layout_constraintBottom_toBottomOf="@id/tvContinue"
                 app:layout_constraintEnd_toStartOf="@id/tvContinue"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
                 app:layout_constraintTop_toTopOf="@id/tvContinue" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvContinue"
+                style="@style/regularTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_69sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
                 android:text="@string/or_continue_with"
-                android:textColor="@color/darkBlueTextColor"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvSignUp" />
+                app:layout_constraintTop_toBottomOf="@id/tvSignIn" />
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_1sdp"
                 android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
                 android:background="@color/darkBlueTextColor"
                 app:layout_constraintBottom_toBottomOf="@id/tvContinue"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"
                 app:layout_constraintStart_toEndOf="@id/tvContinue"
                 app:layout_constraintTop_toTopOf="@id/tvContinue" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnGoogle"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/grayButton"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_30sdp"
-                android:background="@drawable/gray_round_button"
                 android:drawableStart="@drawable/ic_google_logo"
                 android:drawablePadding="@dimen/_10sdp"
-                android:paddingStart="@dimen/_20sdp"
-                android:paddingEnd="@dimen/_20sdp"
                 android:text="@string/google"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/btnApple"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
                 app:layout_constraintTop_toBottomOf="@id/tvContinue" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnApple"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/grayButton"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_30sdp"
-                android:background="@drawable/gray_round_button"
                 android:drawableStart="@drawable/ic_apple_logo"
                 android:drawablePadding="@dimen/_10sdp"
-                android:paddingStart="@dimen/_20sdp"
-                android:paddingEnd="@dimen/_20sdp"
                 android:text="@string/apple"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"
                 app:layout_constraintStart_toEndOf="@id/btnGoogle"
                 app:layout_constraintTop_toBottomOf="@id/tvContinue" />
         </androidx.constraintlayout.widget.ConstraintLayout>
