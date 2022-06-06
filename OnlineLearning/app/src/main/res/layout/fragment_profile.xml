@@ -29,13 +29,12 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/toolbarTitle"
+        style="@style/mediumTextViewWhite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/profile"
-        android:textColor="@color/white"
         android:textSize="@dimen/_14ssp"
-        app:fontFamily="@font/poppins_medium"
         app:layout_constraintBottom_toBottomOf="@id/btnBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,13 +52,12 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvUserName"
+        style="@style/regularTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_4sdp"
-        android:fontFamily="@font/poppins_regular"
         android:gravity="center"
         android:text="@string/txt_kawsar_ahmed"
-        android:textColor="@color/darkBlueTextColor"
         android:textSize="@dimen/_15ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,12 +65,11 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvUserEmail"
+        style="@style/regularTextViewLightGray"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
         android:gravity="center"
         android:text="@string/txt_user_email"
-        android:textColor="@color/light_gray"
         android:textSize="@dimen/_9ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,13 +98,13 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvCourses"
+            style="@style/regularTextViewWhite"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:gravity="center"
             android:text="@string/txt_courses"
-            android:textColor="@color/white"
             android:textSize="@dimen/_6ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -139,13 +136,13 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvReviews"
+            style="@style/regularTextViewWhite"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:gravity="center"
             android:text="@string/txt_reviews"
-            android:textColor="@color/white"
             android:textSize="@dimen/_6ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -176,13 +173,13 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvHours"
+            style="@style/regularTextViewWhite"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:gravity="center"
             android:text="@string/txt_hours"
-            android:textColor="@color/white"
             android:textSize="@dimen/_6ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

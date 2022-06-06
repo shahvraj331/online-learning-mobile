@@ -19,26 +19,24 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvUserGreet"
+        style="@style/regularTextViewWhite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_20sdp"
-        android:fontFamily="@font/poppins_regular"
         android:text="@string/user_greet"
-        android:textColor="@color/white"
         android:textSize="@dimen/_25ssp"
         app:layout_constraintBottom_toTopOf="@+id/tvSubTitle"
         app:layout_constraintStart_toStartOf="@id/imgHeader" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSubTitle"
+        style="@style/regularTextViewWhite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_29sdp"
-        android:fontFamily="@font/poppins_regular"
         android:text="@string/lets_start_learning"
-        android:textColor="@color/white"
         android:textSize="@dimen/_15ssp"
         app:layout_constraintBottom_toTopOf="@id/searchBar"
         app:layout_constraintStart_toStartOf="@id/imgHeader" />
@@ -91,12 +89,11 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvOngoingCourse"
+                style="@style/regularTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:fontFamily="@font/poppins_regular"
                 android:text="@string/ongoing_course"
-                android:textColor="@color/darkBlueTextColor"
                 android:textSize="@dimen/_14ssp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -104,12 +101,11 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvOngoingCourseViewAll"
+                style="@style/regularTextViewGreen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:fontFamily="@font/poppins_regular"
                 android:text="@string/view_all"
-                android:textColor="@color/appBaseColor"
                 android:textSize="@dimen/_12ssp"
                 app:layout_constraintBottom_toBottomOf="@id/tvOngoingCourse"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -128,12 +124,11 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvChoiceCourse"
+                style="@style/regularTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:fontFamily="@font/poppins_regular"
                 android:text="@string/choice_your_courses"
-                android:textColor="@color/darkBlueTextColor"
                 android:textSize="@dimen/_14ssp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/rvOngoingCourse"
@@ -141,12 +136,11 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvChoiceCourseViewAll"
+                style="@style/regularTextViewGreen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:fontFamily="@font/poppins_regular"
                 android:text="@string/view_all"
-                android:textColor="@color/appBaseColor"
                 android:textSize="@dimen/_12ssp"
                 app:layout_constraintBottom_toBottomOf="@id/tvChoiceCourse"
                 app:layout_constraintEnd_toEndOf="parent"
