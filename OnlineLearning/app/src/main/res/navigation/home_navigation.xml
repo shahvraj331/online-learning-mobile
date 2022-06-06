@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.example.onlinelearning.HomeFragment"
+        android:name="com.example.onlinelearning.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -17,9 +17,9 @@
 
     <fragment
         android:id="@+id/search"
-        android:name="com.example.onlinelearning.SearchFragment"
+        android:name="com.example.onlinelearning.fragment.ProfileFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search">
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_searchFragment_to_homeFragment2"
             app:popUpTo="@id/home" />
@@ -27,9 +27,9 @@
 
     <fragment
         android:id="@+id/courses"
-        android:name="com.example.onlinelearning.SearchFragment"
+        android:name="com.example.onlinelearning.fragment.ProfileFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search">
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_searchFragment_to_homeFragment2"
             app:popUpTo="@id/home" />
@@ -37,9 +37,9 @@
 
     <fragment
         android:id="@+id/message"
-        android:name="com.example.onlinelearning.SearchFragment"
+        android:name="com.example.onlinelearning.fragment.ProfileFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search">
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_searchFragment_to_homeFragment2"
             app:popUpTo="@id/home" />
@@ -47,9 +47,9 @@
 
     <fragment
         android:id="@+id/profile"
-        android:name="com.example.onlinelearning.SearchFragment"
+        android:name="com.example.onlinelearning.fragment.ProfileFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search">
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_searchFragment_to_homeFragment2"
             app:popUpTo="@id/home" />
