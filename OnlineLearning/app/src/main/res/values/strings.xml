@@ -60,4 +60,8 @@
     <string name="txt_courses">15 Courses</string>
     <string name="txt_hours">23 Hours</string>
     <string name="txt_reviews">4.9 Reviews</string>
+    <string name="login_failure">Login unsuccessful</string>
+    <string name="signup_failure">SignUp unsuccessful</string>
+    <string name="ok">OK</string>
+    <string name="dialogTitle">Error!</string>
 </resources>

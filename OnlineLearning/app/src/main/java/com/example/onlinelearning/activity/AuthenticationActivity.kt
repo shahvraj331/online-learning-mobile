@@ -1,11 +1,10 @@
 package com.example.onlinelearning.activity
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.onlinelearning.base_class.BaseActivity
 import com.example.onlinelearning.databinding.ActivityAuthenticationBinding
 
-class AuthenticationActivity : AppCompatActivity() {
+class AuthenticationActivity : BaseActivity() {
 
     private lateinit var binding: ActivityAuthenticationBinding
 
@@ -16,11 +15,11 @@ class AuthenticationActivity : AppCompatActivity() {
 
         with(binding) {
             btnSignIn.setOnClickListener {
-                startActivity(Intent(this@AuthenticationActivity, LoginActivity::class.java))
+                startNewActivity(LoginActivity())
             }
 
             btnSignUp.setOnClickListener {
-                startActivity(Intent(this@AuthenticationActivity, SignUpActivity::class.java))
+                startNewActivity(SignUpActivity())
             }
         }
     }

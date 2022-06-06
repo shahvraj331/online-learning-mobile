@@ -1,12 +1,13 @@
 package com.example.onlinelearning.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.onlinelearning.R
-import com.example.onlinelearning.common.*
+import com.example.onlinelearning.base_class.BaseActivity
+import com.example.onlinelearning.common.updateTransformationMethod
+import com.example.onlinelearning.common.verifyNonEmpty
 import com.example.onlinelearning.databinding.ActivityResetPasswordBinding
 
-class ResetPasswordActivity : AppCompatActivity() {
+class ResetPasswordActivity : BaseActivity() {
 
     private lateinit var binding: ActivityResetPasswordBinding
 

@@ -1,24 +1,25 @@
 package com.example.onlinelearning.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
+import android.view.View
+import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.example.onlinelearning.R
+import com.example.onlinelearning.base_class.BaseActivity
 import com.example.onlinelearning.common.Constants
 import com.example.onlinelearning.common.getSpannable
-import com.example.onlinelearning.common.hideKeyboard
-import com.example.onlinelearning.common.startNewActivity
-import com.example.onlinelearning.common.toastMessage
 import com.example.onlinelearning.common.trimmedText
 import com.example.onlinelearning.common.updateTransformationMethod
 import com.example.onlinelearning.common.verifyEmailAddress
 import com.example.onlinelearning.common.verifyNonEmpty
 import com.example.onlinelearning.databinding.ActivitySignUpBinding
+import com.example.onlinelearning.view_model.SignUpViewModel
 
-class SignUpActivity : AppCompatActivity() {
+class SignUpActivity : BaseActivity() {
 
     private lateinit var binding: ActivitySignUpBinding
+    private val viewModel: SignUpViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,8 +53,14 @@ class SignUpActivity : AppCompatActivity() {
 
             btnSignUp.setOnClickListener {
                 if (isValidCredentials()) {
-                    //TODO: Start home screen
+                    progressBar.visibility = View.VISIBLE
+                    viewModel.createUser(etEmail.trimmedText(), etPassword.trimmedText(), this@SignUpActivity)
                 }
+            }
+
+            viewModel.signUpSuccess.observe(this@SignUpActivity) {
+                progressBar.visibility = View.GONE
+                if (it) startNewActivity(HomeActivity())
             }
         }
     }

@@ -2,22 +2,23 @@ package com.example.onlinelearning.activity
 
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
-import androidx.appcompat.app.AppCompatActivity
+import android.view.View
+import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.example.onlinelearning.R
+import com.example.onlinelearning.base_class.BaseActivity
 import com.example.onlinelearning.common.Constants
 import com.example.onlinelearning.common.getSpannable
-import com.example.onlinelearning.common.hideKeyboard
-import com.example.onlinelearning.common.startNewActivity
-import com.example.onlinelearning.common.toastMessage
 import com.example.onlinelearning.common.trimmedText
 import com.example.onlinelearning.common.updateTransformationMethod
 import com.example.onlinelearning.common.verifyNonEmpty
 import com.example.onlinelearning.databinding.ActivityLoginBinding
+import com.example.onlinelearning.view_model.LoginViewModel
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
     private lateinit var binding: ActivityLoginBinding
+    private val viewModel: LoginViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,8 +56,14 @@ class LoginActivity : AppCompatActivity() {
 
             btnSignIn.setOnClickListener {
                 if (isValidCredentials()) {
-                    //TODO: Start home screen
+                    progressBar.visibility = View.VISIBLE
+                    viewModel.loginUser(etName.trimmedText(), etPassword.trimmedText(), this@LoginActivity)
                 }
+            }
+
+            viewModel.loginSuccess.observe(this@LoginActivity) {
+                progressBar.visibility = View.GONE
+                if (it) startNewActivity(HomeActivity())
             }
         }
     }

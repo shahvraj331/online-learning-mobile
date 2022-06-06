@@ -1,12 +1,12 @@
 package com.example.onlinelearning.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.onlinelearning.R
-import com.example.onlinelearning.common.*
+import com.example.onlinelearning.base_class.BaseActivity
+import com.example.onlinelearning.common.verifyEmailAddress
 import com.example.onlinelearning.databinding.ActivityForgotPasswordBinding
 
-class ForgotPasswordActivity : AppCompatActivity() {
+class ForgotPasswordActivity : BaseActivity() {
 
     private lateinit var binding: ActivityForgotPasswordBinding
 

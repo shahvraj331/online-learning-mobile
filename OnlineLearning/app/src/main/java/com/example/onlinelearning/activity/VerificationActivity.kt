@@ -2,13 +2,16 @@ package com.example.onlinelearning.activity
 
 import android.os.Bundle
 import android.widget.EditText
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.onlinelearning.R
-import com.example.onlinelearning.common.*
+import com.example.onlinelearning.base_class.BaseActivity
+import com.example.onlinelearning.common.Constants
+import com.example.onlinelearning.common.OTPTextWatcher
+import com.example.onlinelearning.common.getSpannable
+import com.example.onlinelearning.common.verifyNonEmpty
 import com.example.onlinelearning.databinding.ActivityVerificationBinding
 
-class VerificationActivity : AppCompatActivity() {
+class VerificationActivity : BaseActivity() {
 
     private lateinit var binding: ActivityVerificationBinding
 
