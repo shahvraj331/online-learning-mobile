@@ -31,7 +31,7 @@ class ProfileAdapter(private val profileData: ArrayList<ProfileData>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return if (viewType == Constants.ZERO.toInt()) {
+        return if (viewType == Constants.ZERO) {
             val binding = ItemProfileSwitchBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             SwitchViewHolder(binding)
         } else {
@@ -42,7 +42,7 @@ class ProfileAdapter(private val profileData: ArrayList<ProfileData>):
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder.itemViewType) {
-            Constants.ZERO.toInt() -> {
+            Constants.ZERO -> {
                 (holder as SwitchViewHolder).bindViewHolder(position)
             }
             Constants.ONE -> {
